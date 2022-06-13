@@ -1,4 +1,4 @@
-name: NPM with cache
+name: NPM with cache fix
 
 on:
   push:
