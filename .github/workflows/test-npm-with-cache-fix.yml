@@ -1,0 +1,17 @@
+name: NPM with cache
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: cino/setup-node@warn-when-cache-unavailable
+        with:
+          node-version: 16
+          cache: 'npm'
+      
